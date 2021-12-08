@@ -1,7 +1,7 @@
 apply plugin: 'java'
 apply plugin: 'eclipse'
 
-sourceCompatibility = 1.6
+sourceCompatibility = 1.7
 version = '0.1'
 
 repositories {
@@ -15,14 +15,14 @@ configurations {
 
 dependencies {
   grammarCompile 'org.antlr:antlr:3.4'
-  compile 'org.antlr:antlr-runtime:3.4'
-  testCompile 'junit:junit:4.+'
-  compile 'org.jsoup:jsoup:1.6.1'
-  compile 'org.json:json:20090211'
+  implementation 'org.antlr:antlr-runtime:3.4'
+  testImplementation 'junit:junit:4.+'
+  implementation 'org.jsoup:jsoup:1.6.1'
+  implementation 'org.json:json:20090211'
 }
 
 
-task generateGrammarSources (description: 'Invokes the antlr3-task from ant to generate grammar sources') << {
+task generateGrammarSources (description: 'Invokes the antlr3-task from ant to generate grammar sources') doLast {
     generatedDir.mkdirs()
 
     ant {
@@ -50,7 +50,7 @@ compileJava {
 }
 
 jar {
-    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
     manifest {
         attributes 'Main-Class': 'org.arb.extractor.ExtractorApp'
     }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.arb.extractor.ResourceExtractorTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2021-12-08T00:39:59" hostname="Moroni.local" time="0.066">
+  <properties/>
+  <testcase name="testSimepleMessageComposition2" classname="org.arb.extractor.ResourceExtractorTest" time="0.055"/>
+  <testcase name="testSimepleMessageComposition3" classname="org.arb.extractor.ResourceExtractorTest" time="0.003"/>
+  <testcase name="testSimepleMessageComposition4" classname="org.arb.extractor.ResourceExtractorTest" time="0.004"/>
+  <testcase name="testLiteralStringExtraction" classname="org.arb.extractor.ResourceExtractorTest" time="0.001"/>
+  <testcase name="testSwithMessageComposition" classname="org.arb.extractor.ResourceExtractorTest" time="0.001"/>
+  <testcase name="testSimepleMessageComposition" classname="org.arb.extractor.ResourceExtractorTest" time="0.001"/>
+  <testcase name="testLiteralStringConcatenation" classname="org.arb.extractor.ResourceExtractorTest" time="0.0"/>
+  <testcase name="testLiteralStringConcatenation2" classname="org.arb.extractor.ResourceExtractorTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
